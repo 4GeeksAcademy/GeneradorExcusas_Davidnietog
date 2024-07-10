@@ -1,24 +1,27 @@
 let who = ["El perro", "Mi padre", "Mi madre", "Mi hermano", "Mi gato"];
-let what = ["se comió", "aplastó", "robó", "rompió", "perdió"];
+let action = ["se comió", "aplastó", "robó", "rompió", "perdió"];
+let what = ["el movil", " los deberes", " el coche"];
 let when = [
-  "antes de clase",
+  "en el concierto",
   "justo cuando los terminé",
-  "mientras comía",
-  "mientras yo estaba fuera de casa",
+  "sin darse cuenta",
+  "mientras yo estaba fuera de casa"
 ];
 
-function excuseGenerator(quien, que, cuando) {
-  numQuien = Math.floor(Math.random() * quien.length);
-  numQue = Math.floor(Math.random() * que.length);
-  numCuando = Math.floor(Math.random() * cuando.length);
+function excuseGenerator(who, what, when) {
+  let numwho = Math.floor(Math.random() * who.length);
+  let numaction = Math.floor(Math.random() * action.length);
+  let numwhat = Math.floor(Math.random() * what.length);
+  let numwhen = Math.floor(Math.random() * when.length);
   return (
-    quien[numQuien] +
+    who[numwho] +
     " " +
-    que[numQue] +
+    action[numaction] +
     " " +
-    "mis deberes" +
+    what[numwhat] +
     " " +
-    cuando[numCuando]
+    " " +
+    when[numwhen]
   );
 }
 function onLoad() {
